@@ -1,0 +1,37 @@
+<!Doctype html>
+<html>
+<head>
+    <title> Code Challenge</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container" onclick='routingMethod("users","users")'>Code Challenge</div>
+</header>
+<section>
+    <div class="container">
+        <div class="select-box">
+            <label for="selectType">Select Category</label>
+            <select id="selectType" onchange="changingOption(event)" class="data-option">
+                <option value=""></option>
+                <option value="users">user</option>
+                <option value="albums">albums</option>
+                <option value="photos">photo</option>
+            </select>
+        </div>
+    </div>
+    <div class="container content-box">
+
+
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+</html>
