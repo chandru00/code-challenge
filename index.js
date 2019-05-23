@@ -8,7 +8,8 @@
     routingMethod = async (params,option) => ( await apiCall(`${params}`,option) );
 
    /*@params  data server response array
-     @descriptor this method looping the user data and binding user info into UI */
+     @descriptor this method looping the user data and binding user info into UI and 
+     based on the users clicks passing userID and get the selective albums which matching UserID objects in array of album */
    users = async (data) => {
        let usersInfo = data.map ((data) => (
            `<tr class="user-row" id="${data['id']}">
@@ -22,7 +23,8 @@
    };
 
     /*@params  data server response array
-     @descriptor manipulating albums rows data and binding html */
+     @descriptor manipulating albums rows data and binding html
+     and when you click just get the albumID and using that we retrive the mactching of all albumId  objects in photos array*/
    albums = async (data) => {
         let layout = data.map ((data) => (
             `<tr class="user-row" id="${data['userId']}">
@@ -69,7 +71,7 @@
        createPhoto(newData,responseData);
    };
 
-    //Select Drop Down trigger here
+    //Select Drop Down trigger here and the loaded all the data in the fetch call in json place holder takes time to loading
    changingOption =  async ({target}) => {
         let routes =  $(target).val();
         console.log(routes);
